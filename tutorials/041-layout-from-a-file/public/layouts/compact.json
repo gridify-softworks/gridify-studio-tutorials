@@ -1,0 +1,31 @@
+{
+  "options": { "dockingMode": "roles" },
+  "components": ["explorer", "welcome", "output"],
+  "layout": {
+    "type": "column",
+    "size": 100,
+    "children": [
+      {
+        "type": "panel",
+        "tag": "documents",
+        "role": "document",
+        "size": 75,
+        "activeTab": 0,
+        "collapsed": false,
+        "tabs": [{ "role": "document", "title": "Welcome", "componentKey": "welcome" }]
+      },
+      {
+        "type": "panel",
+        "tag": "tools",
+        "role": "tool",
+        "size": 25,
+        "activeTab": 0,
+        "collapsed": false,
+        "tabs": [
+          { "role": "tool", "title": "Explorer", "componentKey": "explorer" },
+          { "role": "tool", "title": "Output", "componentKey": "output" }
+        ]
+      }
+    ]
+  }
+}

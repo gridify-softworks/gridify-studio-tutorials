@@ -1,0 +1,50 @@
+/* The themes, the density of the controls and the text styles of Gridify. */
+@use '@gridify/studio/styles';
+
+/* Without a docking engine nothing paints the page: the body takes the background and the text color of the theme. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--grd-font-main);
+  background: var(--grd-bg-main);
+  color: var(--grd-text-main);
+}
+
+/* A section of the page (the components in src/app have the class demo): a heading, a text, rows of buttons and the last answer. */
+.demo {
+  display: block;
+  max-width: 960px;
+  margin-top: 16px;
+
+  h2 {
+    margin: 0 0 4px;
+    font-size: 1.05rem;
+  }
+
+  p {
+    margin: 0 0 8px;
+    max-width: 75ch;
+    line-height: 1.45;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .row-name {
+    width: 88px;
+    opacity: 0.88;
+  }
+
+  /* What the last message answered: an <output>, so a screen reader says it too. */
+  .answer {
+    display: block;
+    margin: 4px 0 8px;
+    opacity: 0.88;
+  }
+}

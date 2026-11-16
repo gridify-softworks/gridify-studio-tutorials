@@ -1,0 +1,554 @@
+[
+  {
+    "id": "home",
+    "label": "Home",
+    "keytip": "H",
+    "sections": [
+      {
+        "id": "clipboard",
+        "title": "Clipboard",
+        "launcher": "clipboard-options",
+        "collapsible": false,
+        "items": [
+          {
+            "type": "split-button",
+            "id": "paste",
+            "col": 1,
+            "colSpan": 3,
+            "label": "Paste",
+            "icon": "app:paste",
+            "action": "paste",
+            "shortcut": "Mod+V",
+            "keytip": "V",
+            "description": "Puts what you cut or copied into the document. The arrow offers other ways to paste.",
+            "inputs": { "size": "large" },
+            "choices": [
+              { "label": "Paste", "value": "paste", "icon": "app:paste" },
+              { "label": "Paste as text", "value": "text", "shortcut": "Mod+Shift+V" },
+              { "kind": "separator" },
+              { "label": "Paste special…", "value": "special" }
+            ]
+          },
+          {
+            "type": "button",
+            "id": "cut",
+            "col": 4,
+            "row": 1,
+            "colSpan": 5,
+            "label": "Cut",
+            "icon": "app:cut",
+            "action": "cut",
+            "shortcut": "Mod+X",
+            "keytip": "X"
+          },
+          {
+            "type": "button",
+            "id": "copy",
+            "col": 4,
+            "row": 2,
+            "colSpan": 5,
+            "label": "Copy",
+            "icon": "app:copy",
+            "action": "copy",
+            "shortcut": "Mod+C",
+            "keytip": "C"
+          },
+          {
+            "type": "button",
+            "id": "formatPainter",
+            "col": 4,
+            "row": 3,
+            "colSpan": 5,
+            "label": "Format Painter",
+            "icon": "app:format-painter",
+            "action": "format-painter",
+            "keytip": "FP"
+          }
+        ]
+      },
+      {
+        "id": "font",
+        "title": "Font",
+        "columns": 12,
+        "compactColumns": 3,
+        "collapsePriority": 2,
+        "items": [
+          {
+            "type": "combobox",
+            "id": "fontFamily",
+            "action": "font-family",
+            "value": "Georgia",
+            "col": 1,
+            "row": 1,
+            "colSpan": 8,
+            "tooltip": "Font",
+            "inputs": { "placeholder": "Font" },
+            "choices": [
+              { "label": "Georgia" },
+              { "label": "Arial" },
+              { "label": "Courier New" },
+              { "label": "Trebuchet MS" }
+            ]
+          },
+          {
+            "type": "spinner",
+            "id": "fontSize",
+            "action": "font-size",
+            "value": 11,
+            "col": 9,
+            "row": 1,
+            "colSpan": 4,
+            "tooltip": "Font size",
+            "inputs": { "min": 6, "max": 96, "step": 1, "unit": "pt" }
+          },
+          {
+            "type": "toggle-button",
+            "id": "bold",
+            "icon": "app:bold",
+            "action": "bold",
+            "shortcut": "Mod+B",
+            "keytip": "1",
+            "tooltip": "Bold",
+            "col": 1,
+            "row": 2,
+            "inputs": { "iconOnly": true }
+          },
+          {
+            "type": "toggle-button",
+            "id": "italic",
+            "icon": "app:italic",
+            "action": "italic",
+            "shortcut": "Mod+I",
+            "keytip": "2",
+            "tooltip": "Italic",
+            "col": 2,
+            "row": 2,
+            "inputs": { "iconOnly": true }
+          },
+          {
+            "type": "toggle-button",
+            "id": "underline",
+            "icon": "app:underline",
+            "action": "underline",
+            "shortcut": "Mod+U",
+            "keytip": "3",
+            "tooltip": "Underline",
+            "col": 3,
+            "row": 2,
+            "inputs": { "iconOnly": true }
+          },
+          {
+            "type": "color-picker",
+            "id": "fontColor",
+            "label": "Font color",
+            "action": "font-color",
+            "value": "#c00000",
+            "col": 4,
+            "row": 2,
+            "colSpan": 3,
+            "inputs": { "automatic": "#000000", "moreColors": true }
+          }
+        ]
+      },
+      {
+        "id": "paragraph",
+        "title": "Paragraph",
+        "collapsePriority": 1,
+        "items": [
+          {
+            "type": "toggle-group",
+            "id": "alignment",
+            "col": 1,
+            "row": 1,
+            "colSpan": 8,
+            "action": "align",
+            "inputs": { "exclusive": true },
+            "choices": [
+              { "label": "Left", "value": "left", "icon": "app:align-left", "checked": true },
+              { "label": "Center", "value": "center", "icon": "app:align-center" },
+              { "label": "Right", "value": "right", "icon": "app:align-right" }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "lineSpacing",
+            "col": 1,
+            "row": 2,
+            "colSpan": 8,
+            "action": "line-spacing",
+            "value": "1.15",
+            "tooltip": "Line spacing",
+            "choices": [
+              { "label": "1.0", "value": "1.0" },
+              { "label": "1.15", "value": "1.15" },
+              { "label": "1.5", "value": "1.5" },
+              { "label": "2.0", "value": "2.0" }
+            ]
+          },
+          {
+            "type": "checkbox",
+            "id": "wrap",
+            "col": 1,
+            "row": 3,
+            "colSpan": 8,
+            "label": "Wrap text",
+            "action": "wrap",
+            "checked": true
+          }
+        ]
+      },
+      {
+        "id": "styles",
+        "title": "Styles",
+        "collapsePriority": 3,
+        "items": [
+          {
+            "type": "gallery",
+            "id": "styleGallery",
+            "col": 1,
+            "colSpan": 7,
+            "rowSpan": "all",
+            "action": "style",
+            "value": "normal",
+            "inputs": { "pageSize": 3 },
+            "choices": [
+              { "label": "Normal", "value": "normal", "preview": "AaBb" },
+              {
+                "label": "Heading 1",
+                "value": "h1",
+                "preview": "AaBb",
+                "style": { "font-weight": "700", "font-size": "18px" }
+              },
+              {
+                "label": "Heading 2",
+                "value": "h2",
+                "preview": "AaBb",
+                "style": { "font-weight": "600" }
+              },
+              {
+                "label": "Quote",
+                "value": "quote",
+                "preview": "AaBb",
+                "style": { "font-style": "italic" }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "insert",
+    "label": "Insert",
+    "keytip": "N",
+    "sections": [
+      {
+        "id": "tables",
+        "title": "Tables",
+        "items": [
+          {
+            "type": "table-picker",
+            "id": "table",
+            "col": 1,
+            "colSpan": 2,
+            "label": "Table",
+            "icon": "app:table",
+            "action": "insert-table",
+            "inputs": { "size": "large", "columns": 8, "rows": 6 }
+          }
+        ]
+      },
+      {
+        "id": "illustrations",
+        "title": "Illustrations",
+        "collapsePriority": 2,
+        "items": [
+          {
+            "type": "large-button",
+            "id": "picture",
+            "col": 1,
+            "colSpan": 3,
+            "label": "Picture",
+            "icon": "app:picture",
+            "action": "insert-picture",
+            "keytip": "P"
+          },
+          {
+            "type": "dropdown-button",
+            "id": "shapes",
+            "col": 4,
+            "colSpan": 3,
+            "label": "Shapes",
+            "icon": "app:shapes",
+            "action": "insert-shape",
+            "value": "rectangle",
+            "inputs": { "size": "large" },
+            "choices": [
+              { "kind": "header", "label": "Basic shapes" },
+              { "label": "Rectangle", "value": "rectangle" },
+              { "label": "Ellipse", "value": "ellipse" },
+              { "kind": "separator" },
+              { "label": "Triangle", "value": "triangle" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "links",
+        "title": "Links",
+        "collapsible": false,
+        "items": [
+          {
+            "type": "styled-button",
+            "id": "link",
+            "col": 1,
+            "row": 1,
+            "colSpan": 6,
+            "label": "Link",
+            "icon": "app:link",
+            "action": "insert-link",
+            "shortcut": "Mod+K",
+            "inputs": { "variant": "primary" }
+          },
+          {
+            "type": "label",
+            "id": "linkHint",
+            "col": 1,
+            "row": 2,
+            "colSpan": 6,
+            "label": "Links open in a new window"
+          }
+        ]
+      },
+      {
+        "id": "page",
+        "title": "Page",
+        "collapsePriority": 1,
+        "items": [
+          {
+            "type": "select",
+            "id": "paper",
+            "col": 1,
+            "row": 1,
+            "colSpan": 6,
+            "action": "paper",
+            "value": "a4",
+            "tooltip": "Paper",
+            "choices": [
+              { "label": "A4", "value": "a4" },
+              { "label": "Letter", "value": "letter" },
+              { "label": "A5", "value": "a5" }
+            ]
+          },
+          {
+            "type": "button",
+            "id": "pageBreak",
+            "col": 1,
+            "row": 2,
+            "colSpan": 6,
+            "label": "Page break",
+            "icon": "app:page-break",
+            "action": "page-break"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "view",
+    "label": "View",
+    "keytip": "W",
+    "sections": [
+      {
+        "id": "show",
+        "title": "Show",
+        "items": [
+          {
+            "type": "checkbox",
+            "id": "ruler",
+            "col": 1,
+            "row": 1,
+            "colSpan": 5,
+            "label": "Ruler",
+            "action": "ruler",
+            "checked": true
+          },
+          {
+            "type": "checkbox",
+            "id": "gridlines",
+            "col": 1,
+            "row": 2,
+            "colSpan": 5,
+            "label": "Gridlines",
+            "action": "gridlines"
+          },
+          {
+            "type": "checkbox",
+            "id": "navigation",
+            "col": 1,
+            "row": 3,
+            "colSpan": 5,
+            "label": "Navigation pane",
+            "action": "navigation",
+            "checked": true
+          }
+        ]
+      },
+      {
+        "id": "layout",
+        "title": "Layout",
+        "items": [
+          {
+            "type": "radio",
+            "id": "layoutPrint",
+            "col": 1,
+            "row": 1,
+            "colSpan": 4,
+            "label": "Print layout",
+            "action": "layout-print",
+            "checked": true,
+            "inputs": { "group": "layout" }
+          },
+          {
+            "type": "radio",
+            "id": "layoutWeb",
+            "col": 1,
+            "row": 2,
+            "colSpan": 4,
+            "label": "Web layout",
+            "action": "layout-web",
+            "inputs": { "group": "layout" }
+          },
+          {
+            "type": "radio",
+            "id": "layoutOutline",
+            "col": 1,
+            "row": 3,
+            "colSpan": 4,
+            "label": "Outline",
+            "action": "layout-outline",
+            "inputs": { "group": "layout" }
+          }
+        ]
+      },
+      {
+        "id": "zoom",
+        "title": "Zoom",
+        "items": [
+          {
+            "type": "large-button",
+            "id": "zoomDialog",
+            "col": 1,
+            "colSpan": 2,
+            "label": "Zoom",
+            "icon": "app:zoom",
+            "action": "zoom"
+          },
+          {
+            "type": "spinner",
+            "id": "zoomPercent",
+            "col": 3,
+            "row": 1,
+            "colSpan": 4,
+            "action": "zoom-percent",
+            "value": 100,
+            "tooltip": "Zoom",
+            "inputs": { "min": 10, "max": 500, "step": 10, "unit": "%" }
+          }
+        ]
+      },
+      {
+        "id": "status",
+        "title": "Status",
+        "items": [
+          {
+            "type": "progress-bar",
+            "id": "saved",
+            "col": 1,
+            "row": 1,
+            "colSpan": 6,
+            "label": "Goal",
+            "value": 42,
+            "inputs": { "showValue": true, "variant": "success" }
+          },
+          {
+            "type": "progress-ring",
+            "id": "pages",
+            "col": 7,
+            "colSpan": 2,
+            "label": "Pages",
+            "value": 84,
+            "inputs": { "showValue": true, "size": "large", "variant": "accent" }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pictureTools",
+    "label": "Picture Tools",
+    "keytip": "J",
+    "contextual": true,
+    "sections": [
+      {
+        "id": "adjust",
+        "title": "Adjust",
+        "items": [
+          {
+            "type": "large-button",
+            "id": "removeBackground",
+            "col": 1,
+            "colSpan": 4,
+            "label": "Remove Background",
+            "icon": "app:eraser",
+            "action": "remove-background"
+          },
+          {
+            "type": "dropdown-button",
+            "id": "corrections",
+            "col": 5,
+            "colSpan": 4,
+            "label": "Corrections",
+            "icon": "app:highlighter",
+            "action": "corrections",
+            "inputs": { "size": "large" },
+            "choices": [
+              { "label": "Sharpen", "value": "sharpen" },
+              { "label": "Soften", "value": "soften" },
+              { "kind": "separator" },
+              { "label": "Reset", "value": "reset" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "size",
+        "title": "Size",
+        "items": [
+          {
+            "type": "spinner",
+            "id": "pictureHeight",
+            "col": 1,
+            "row": 1,
+            "colSpan": 6,
+            "action": "picture-height",
+            "value": 120,
+            "tooltip": "Height",
+            "inputs": { "min": 10, "max": 400, "step": 5, "unit": "mm" }
+          },
+          {
+            "type": "spinner",
+            "id": "pictureWidth",
+            "col": 1,
+            "row": 2,
+            "colSpan": 6,
+            "action": "picture-width",
+            "value": 80,
+            "tooltip": "Width",
+            "inputs": { "min": 10, "max": 400, "step": 5, "unit": "mm" }
+          }
+        ]
+      }
+    ]
+  }
+]

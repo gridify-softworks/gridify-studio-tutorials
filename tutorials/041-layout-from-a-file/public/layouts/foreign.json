@@ -1,0 +1,28 @@
+{
+  "options": { "dockingMode": "roles" },
+  "components": ["welcome", "terminal"],
+  "layout": {
+    "type": "column",
+    "size": 100,
+    "children": [
+      {
+        "type": "panel",
+        "tag": "documents",
+        "role": "document",
+        "size": 70,
+        "activeTab": 0,
+        "collapsed": false,
+        "tabs": [{ "role": "document", "title": "Welcome", "componentKey": "welcome" }]
+      },
+      {
+        "type": "panel",
+        "tag": "terminal",
+        "role": "tool",
+        "size": 30,
+        "activeTab": 0,
+        "collapsed": false,
+        "tabs": [{ "role": "tool", "title": "Terminal", "componentKey": "terminal" }]
+      }
+    ]
+  }
+}

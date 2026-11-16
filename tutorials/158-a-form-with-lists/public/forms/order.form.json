@@ -1,0 +1,125 @@
+{
+  "format": "grd-form-layout",
+  "version": 1,
+  "spacing": { "y": "75%" },
+  "defaults": { "message": "top right badge -9 -6" },
+  "forms": [
+    {
+      "name": "order",
+      "elements": [
+        { "kind": "static", "name": "customerLabel", "text": "Customer", "for": "customer" },
+        { "kind": "input", "name": "customer" },
+        { "kind": "static", "name": "phonesLabel", "text": "Phones" },
+        {
+          "kind": "group",
+          "name": "phones",
+          "title": "Phones",
+          "look": "none",
+          "repeat": true,
+          "elements": [
+            { "kind": "input", "name": "phone" },
+            { "kind": "input", "name": "removePhone" }
+          ]
+        },
+        { "kind": "input", "name": "addPhone" },
+        {
+          "kind": "group",
+          "name": "linesBox",
+          "title": "Order lines",
+          "elements": [
+            {
+              "kind": "static",
+              "name": "productCaption",
+              "text": "Product",
+              "appearance": "caption"
+            },
+            {
+              "kind": "static",
+              "name": "quantityCaption",
+              "text": "Quantity",
+              "appearance": "caption"
+            },
+            { "kind": "subform", "name": "lines", "form": "line", "repeat": true },
+            { "kind": "input", "name": "addLine" }
+          ]
+        },
+        { "kind": "static", "name": "noteLabel", "text": "Note", "for": "note" },
+        { "kind": "input", "name": "note" }
+      ],
+      "variants": [
+        {
+          "minWidth": 0,
+          "cols": 24,
+          "rows": 21,
+          "places": {
+            "customerLabel": { "col": 1, "row": 1, "colSpan": 24, "rowSpan": 1 },
+            "customer": { "col": 1, "row": 2, "colSpan": 24, "rowSpan": 2 },
+            "phonesLabel": { "col": 1, "row": 4, "colSpan": 24, "rowSpan": 1 },
+            "phones": { "col": 1, "row": 5, "colSpan": 24, "rowSpan": 2 },
+            "phone": { "col": 1, "row": 1, "colSpan": 20, "rowSpan": 2 },
+            "removePhone": { "col": 21, "row": 1, "colSpan": 4, "rowSpan": 2, "justify": "start" },
+            "addPhone": { "col": 1, "row": 7, "colSpan": 24, "rowSpan": 2, "justify": "start" },
+            "linesBox": { "col": 1, "row": 9, "colSpan": 24, "rowSpan": 8 },
+            "productCaption": { "col": 2, "row": 3, "colSpan": 11, "rowSpan": 1 },
+            "quantityCaption": { "col": 13, "row": 3, "colSpan": 7, "rowSpan": 1 },
+            "lines": { "col": 2, "row": 4, "colSpan": 22, "rowSpan": 2 },
+            "addLine": { "col": 2, "row": 6, "colSpan": 22, "rowSpan": 2, "justify": "start" },
+            "noteLabel": { "col": 1, "row": 17, "colSpan": 24, "rowSpan": 1 },
+            "note": { "col": 1, "row": 18, "colSpan": 24, "rowSpan": 4, "align": "stretch" }
+          }
+        },
+        {
+          "minWidth": 600,
+          "cols": 48,
+          "rows": 18,
+          "places": {
+            "customerLabel": { "col": 1, "row": 1, "colSpan": 10, "rowSpan": 2, "justify": "end" },
+            "customer": { "col": 11, "row": 1, "colSpan": 38, "rowSpan": 2 },
+            "phonesLabel": { "col": 1, "row": 3, "colSpan": 10, "rowSpan": 2, "justify": "end" },
+            "phones": { "col": 11, "row": 3, "colSpan": 38, "rowSpan": 2 },
+            "phone": { "col": 1, "row": 1, "colSpan": 32, "rowSpan": 2 },
+            "removePhone": { "col": 33, "row": 1, "colSpan": 6, "rowSpan": 2, "justify": "start" },
+            "addPhone": { "col": 11, "row": 5, "colSpan": 38, "rowSpan": 2, "justify": "start" },
+            "linesBox": { "col": 1, "row": 7, "colSpan": 48, "rowSpan": 8 },
+            "productCaption": { "col": 2, "row": 3, "colSpan": 30, "rowSpan": 1 },
+            "quantityCaption": { "col": 32, "row": 3, "colSpan": 9, "rowSpan": 1 },
+            "lines": { "col": 2, "row": 4, "colSpan": 46, "rowSpan": 2 },
+            "addLine": { "col": 2, "row": 6, "colSpan": 46, "rowSpan": 2, "justify": "start" },
+            "noteLabel": { "col": 1, "row": 15, "colSpan": 10, "rowSpan": 2, "justify": "end" },
+            "note": { "col": 11, "row": 15, "colSpan": 38, "rowSpan": 4, "align": "stretch" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "line",
+      "elements": [
+        { "kind": "input", "name": "product" },
+        { "kind": "input", "name": "quantity" },
+        { "kind": "input", "name": "removeLine" }
+      ],
+      "variants": [
+        {
+          "minWidth": 0,
+          "cols": 22,
+          "rows": 2,
+          "places": {
+            "product": { "col": 1, "row": 1, "colSpan": 11, "rowSpan": 2 },
+            "quantity": { "col": 12, "row": 1, "colSpan": 7, "rowSpan": 2 },
+            "removeLine": { "col": 19, "row": 1, "colSpan": 4, "rowSpan": 2, "justify": "start" }
+          }
+        },
+        {
+          "minWidth": 600,
+          "cols": 46,
+          "rows": 2,
+          "places": {
+            "product": { "col": 1, "row": 1, "colSpan": 30, "rowSpan": 2 },
+            "quantity": { "col": 31, "row": 1, "colSpan": 9, "rowSpan": 2 },
+            "removeLine": { "col": 40, "row": 1, "colSpan": 7, "rowSpan": 2, "justify": "start" }
+          }
+        }
+      ]
+    }
+  ]
+}

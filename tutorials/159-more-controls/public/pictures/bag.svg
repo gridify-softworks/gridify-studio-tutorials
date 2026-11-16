@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#f3e9dc"/>
+  <ellipse cx="400" cy="455" rx="190" ry="22" fill="#d9c6ad"/>
+  <path d="M260 120 L540 120 L575 450 L225 450 Z" fill="#8b5a2b"/>
+  <path d="M260 120 L540 120 L548 165 L252 165 Z" fill="#a0693a"/>
+  <path d="M250 95 L550 95 L540 120 L260 120 Z" fill="#6f4520"/>
+  <rect x="300" y="215" width="200" height="170" rx="12" fill="#fff7ec"/>
+  <rect x="300" y="215" width="200" height="40" rx="12" fill="#c2410c"/>
+  <rect x="300" y="243" width="200" height="12" fill="#c2410c"/>
+  <text x="400" y="242" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">CORNER COFFEE</text>
+  <text x="400" y="300" font-family="Georgia, serif" font-size="26" fill="#3b2a1a" text-anchor="middle">Ethiopia</text>
+  <text x="400" y="332" font-family="Georgia, serif" font-size="20" fill="#6b5442" text-anchor="middle">Yirgacheffe</text>
+  <text x="400" y="368" font-family="Arial, sans-serif" font-size="16" fill="#8a7462" text-anchor="middle">250 g · light roast</text>
+</svg>

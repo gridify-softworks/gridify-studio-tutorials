@@ -1,0 +1,170 @@
+{
+  "format": "grd-form-layout",
+  "version": 1,
+  "grid": { "division": 2 },
+  "spacing": { "y": "75%" },
+  "defaults": { "message": "top right badge -9 -6" },
+  "forms": [
+    {
+      "name": "order",
+      "layers": [{ "name": "subject", "layers": ["person", "company"] }],
+      "elements": [
+        {
+          "kind": "static",
+          "name": "nameLabel",
+          "text": { "$expr": "t('Full name')" },
+          "for": "name",
+          "layer": "person"
+        },
+        { "kind": "input", "name": "name", "layer": "person", "preview": { "as": "grd-input" } },
+        {
+          "kind": "static",
+          "name": "emailLabel",
+          "text": { "$expr": "t('E-mail address')" },
+          "for": "email",
+          "layer": "person"
+        },
+        { "kind": "input", "name": "email", "layer": "person", "preview": { "as": "grd-input" } },
+        {
+          "kind": "static",
+          "name": "companyLabel",
+          "text": { "$expr": "t('Company name')" },
+          "for": "company",
+          "layer": "company"
+        },
+        {
+          "kind": "input",
+          "name": "company",
+          "layer": "company",
+          "preview": { "as": "grd-input" }
+        },
+        {
+          "kind": "static",
+          "name": "vatLabel",
+          "text": { "$expr": "t('VAT number')" },
+          "for": "vatId",
+          "layer": "company"
+        },
+        { "kind": "input", "name": "vatId", "layer": "company", "preview": { "as": "grd-input" } },
+        { "kind": "subform", "name": "billing", "form": "address" },
+        {
+          "kind": "group",
+          "name": "delivery",
+          "title": { "$expr": "t('Delivery')" },
+          "elements": [
+            {
+              "kind": "static",
+              "name": "deliveryByLabel",
+              "text": { "$expr": "t('Delivery by')" },
+              "for": "deliveryBy"
+            },
+            { "kind": "input", "name": "deliveryBy", "preview": { "as": "grd-radio-group" } },
+            { "kind": "input", "name": "gift", "preview": { "as": "grd-checkbox" } }
+          ]
+        },
+        {
+          "kind": "static",
+          "name": "noteLabel",
+          "text": { "$expr": "t('Note for the courier')" },
+          "for": "note"
+        },
+        { "kind": "input", "name": "note", "preview": { "as": "grd-textarea" } }
+      ],
+      "variants": [
+        {
+          "minWidth": 0,
+          "cols": 24,
+          "rows": 24,
+          "places": {
+            "nameLabel": { "col": 1, "row": 1, "colSpan": 24, "rowSpan": 1 },
+            "name": { "col": 1, "row": 2, "colSpan": 24, "rowSpan": 2 },
+            "emailLabel": { "col": 1, "row": 4, "colSpan": 24, "rowSpan": 1 },
+            "email": { "col": 1, "row": 5, "colSpan": 24, "rowSpan": 2 },
+            "companyLabel": { "col": 1, "row": 1, "colSpan": 24, "rowSpan": 1 },
+            "company": { "col": 1, "row": 2, "colSpan": 24, "rowSpan": 2 },
+            "vatLabel": { "col": 1, "row": 4, "colSpan": 24, "rowSpan": 1 },
+            "vatId": { "col": 1, "row": 5, "colSpan": 24, "rowSpan": 2 },
+            "billing": { "col": 1, "row": 7, "colSpan": 24, "rowSpan": 1, "flow": true },
+            "delivery": { "col": 1, "row": 8, "colSpan": 24, "rowSpan": 10 },
+            "deliveryByLabel": { "col": 2, "row": 3, "colSpan": 22, "rowSpan": 1 },
+            "deliveryBy": { "col": 2, "row": 4, "colSpan": 22, "rowSpan": 4, "align": "start" },
+            "gift": { "col": 2, "row": 8, "colSpan": 22, "rowSpan": 2 },
+            "noteLabel": { "col": 1, "row": 18, "colSpan": 24, "rowSpan": 1 },
+            "note": { "col": 1, "row": 19, "colSpan": 24, "rowSpan": 6, "align": "stretch" }
+          }
+        },
+        {
+          "minWidth": 560,
+          "cols": 48,
+          "rows": 15,
+          "places": {
+            "nameLabel": { "col": 1, "row": 1, "colSpan": 12, "rowSpan": 2, "justify": "end" },
+            "name": { "col": 13, "row": 1, "colSpan": 36, "rowSpan": 2 },
+            "emailLabel": { "col": 1, "row": 3, "colSpan": 12, "rowSpan": 2, "justify": "end" },
+            "email": { "col": 13, "row": 3, "colSpan": 36, "rowSpan": 2 },
+            "companyLabel": { "col": 1, "row": 1, "colSpan": 12, "rowSpan": 2, "justify": "end" },
+            "company": { "col": 13, "row": 1, "colSpan": 36, "rowSpan": 2 },
+            "vatLabel": { "col": 1, "row": 3, "colSpan": 12, "rowSpan": 2, "justify": "end" },
+            "vatId": { "col": 13, "row": 3, "colSpan": 36, "rowSpan": 2 },
+            "billing": { "col": 1, "row": 5, "colSpan": 48, "rowSpan": 1, "flow": true },
+            "delivery": { "col": 1, "row": 6, "colSpan": 24, "rowSpan": 10 },
+            "deliveryByLabel": { "col": 2, "row": 3, "colSpan": 22, "rowSpan": 1 },
+            "deliveryBy": { "col": 2, "row": 4, "colSpan": 22, "rowSpan": 4, "align": "start" },
+            "gift": { "col": 2, "row": 8, "colSpan": 22, "rowSpan": 2 },
+            "noteLabel": { "col": 25, "row": 6, "colSpan": 24, "rowSpan": 1 },
+            "note": { "col": 25, "row": 7, "colSpan": 24, "rowSpan": 9, "align": "stretch" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "address",
+      "elements": [
+        {
+          "kind": "static",
+          "name": "streetLabel",
+          "text": { "$expr": "t('Street and number')" },
+          "for": "street"
+        },
+        { "kind": "input", "name": "street" },
+        { "kind": "static", "name": "cityLabel", "text": { "$expr": "t('City')" }, "for": "city" },
+        { "kind": "input", "name": "city" },
+        {
+          "kind": "static",
+          "name": "zipLabel",
+          "text": { "$expr": "t('Postcode')" },
+          "for": "zip"
+        },
+        { "kind": "input", "name": "zip" }
+      ],
+      "variants": [
+        {
+          "minWidth": 0,
+          "cols": 24,
+          "rows": 9,
+          "places": {
+            "streetLabel": { "col": 1, "row": 1, "colSpan": 24, "rowSpan": 1 },
+            "street": { "col": 1, "row": 2, "colSpan": 24, "rowSpan": 2 },
+            "cityLabel": { "col": 1, "row": 4, "colSpan": 24, "rowSpan": 1 },
+            "city": { "col": 1, "row": 5, "colSpan": 24, "rowSpan": 2 },
+            "zipLabel": { "col": 1, "row": 7, "colSpan": 24, "rowSpan": 1 },
+            "zip": { "col": 1, "row": 8, "colSpan": 24, "rowSpan": 2 }
+          }
+        },
+        {
+          "minWidth": 560,
+          "cols": 48,
+          "rows": 4,
+          "places": {
+            "streetLabel": { "col": 1, "row": 1, "colSpan": 12, "rowSpan": 2, "justify": "end" },
+            "street": { "col": 13, "row": 1, "colSpan": 36, "rowSpan": 2 },
+            "cityLabel": { "col": 1, "row": 3, "colSpan": 12, "rowSpan": 2, "justify": "end" },
+            "city": { "col": 13, "row": 3, "colSpan": 20, "rowSpan": 2 },
+            "zipLabel": { "col": 33, "row": 3, "colSpan": 6, "rowSpan": 2, "justify": "end" },
+            "zip": { "col": 39, "row": 3, "colSpan": 10, "rowSpan": 2 }
+          }
+        }
+      ]
+    }
+  ]
+}

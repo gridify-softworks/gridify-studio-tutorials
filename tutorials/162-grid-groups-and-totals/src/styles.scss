@@ -1,0 +1,12 @@
+/* The themes, the density of the controls and the text styles of Gridify. */
+@use '@gridify/studio/styles';
+
+/* Without a docking engine nothing paints the page: the body takes the background and the text color of the theme. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--grd-font-main);
+  background: var(--grd-bg-main);
+  color: var(--grd-text-main);
+}

@@ -1,0 +1,16 @@
+/* The themes, the density of the controls and the text styles of Gridify. */
+@use '@gridify/studio/styles';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--grd-font-main);
+}
+
+/* The saved layout in the dialog of File › Show what is saved: long lines wrap.
+   A global rule, because the HTML of a dialog is not a part of a component. */
+.saved {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

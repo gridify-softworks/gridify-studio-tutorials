@@ -1,0 +1,19 @@
+# Builds every tutorial on every push to a branch and every pull request (npm run build).
+# A tag alone builds nothing: the push of its branch builds the same commit.
+name: Build the tutorials
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm i
+      - run: npm run build

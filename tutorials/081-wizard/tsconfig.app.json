@@ -1,0 +1,8 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/tutorial-081",
+    "types": []
+  },
+  "include": ["src/**/*.ts"]
+}

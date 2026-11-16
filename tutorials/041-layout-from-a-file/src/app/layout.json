@@ -1,0 +1,52 @@
+{
+  "options": { "dockingMode": "roles" },
+  "components": ["explorer", "welcome", "output"],
+  "layout": {
+    "type": "row",
+    "size": 100,
+    "children": [
+      {
+        "type": "panel",
+        "tag": "explorer",
+        "role": "tool",
+        "size": "220px",
+        "resizable": true,
+        "shell": true,
+        "activeTab": 0,
+        "collapsed": false,
+        "tabs": [{ "role": "tool", "title": "Explorer", "componentKey": "explorer" }]
+      },
+      {
+        "type": "column",
+        "size": 100,
+        "children": [
+          {
+            "type": "panel",
+            "tag": "documents",
+            "role": "document",
+            "size": 70,
+            "activeTab": 0,
+            "collapsed": false,
+            "tabs": [
+              { "role": "document", "title": "Welcome", "componentKey": "welcome" },
+              {
+                "role": "document",
+                "title": "Notes",
+                "content": "<h2>Notes</h2><p>An HTML tab of the file: the engine shows its <code>content</code> as it is.</p>"
+              }
+            ]
+          },
+          {
+            "type": "panel",
+            "tag": "output",
+            "role": "tool",
+            "size": 30,
+            "activeTab": 0,
+            "collapsed": false,
+            "tabs": [{ "role": "tool", "title": "Output", "componentKey": "output" }]
+          }
+        ]
+      }
+    ]
+  }
+}

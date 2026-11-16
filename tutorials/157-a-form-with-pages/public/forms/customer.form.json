@@ -1,0 +1,130 @@
+{
+  "format": "grd-form-layout",
+  "version": 1,
+  "spacing": { "y": "100%" },
+  "forms": [
+    {
+      "name": "customer",
+      "elements": [
+        {
+          "kind": "group",
+          "name": "card",
+          "title": "Customer card",
+          "look": "property-sheet",
+          "elements": [
+            {
+              "kind": "group",
+              "name": "person",
+              "title": "Person",
+              "elements": [
+                {
+                  "kind": "static",
+                  "name": "firstNameLabel",
+                  "text": "First name",
+                  "for": "firstName"
+                },
+                { "kind": "input", "name": "firstName" },
+                {
+                  "kind": "static",
+                  "name": "lastNameLabel",
+                  "text": "Last name",
+                  "for": "lastName"
+                },
+                { "kind": "input", "name": "lastName" },
+                { "kind": "static", "name": "emailLabel", "text": "E-mail", "for": "email" },
+                { "kind": "input", "name": "email" }
+              ]
+            },
+            {
+              "kind": "group",
+              "name": "address",
+              "title": "Address",
+              "elements": [
+                {
+                  "kind": "static",
+                  "name": "streetLabel",
+                  "text": "Street and number",
+                  "for": "street"
+                },
+                { "kind": "input", "name": "street" },
+                { "kind": "static", "name": "cityLabel", "text": "City", "for": "city" },
+                { "kind": "input", "name": "city" },
+                {
+                  "kind": "static",
+                  "name": "postcodeLabel",
+                  "text": "Postcode",
+                  "for": "postcode"
+                },
+                { "kind": "input", "name": "postcode" }
+              ]
+            },
+            {
+              "kind": "group",
+              "name": "notes",
+              "title": "Notes",
+              "elements": [
+                { "kind": "static", "name": "noteLabel", "text": "Note", "for": "note" },
+                { "kind": "input", "name": "note" },
+                { "kind": "input", "name": "newsletter" }
+              ]
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "minWidth": 0,
+          "cols": 24,
+          "rows": 12,
+          "places": {
+            "card": { "col": 1, "row": 1, "colSpan": 24, "rowSpan": 12 },
+            "person": { "col": 2, "row": 3, "colSpan": 22, "rowSpan": 9 },
+            "address": { "col": 2, "row": 3, "colSpan": 22, "rowSpan": 9 },
+            "notes": { "col": 2, "row": 3, "colSpan": 22, "rowSpan": 9 },
+            "firstNameLabel": { "col": 1, "row": 1, "colSpan": 22, "rowSpan": 1 },
+            "firstName": { "col": 1, "row": 2, "colSpan": 22, "rowSpan": 2 },
+            "lastNameLabel": { "col": 1, "row": 4, "colSpan": 22, "rowSpan": 1 },
+            "lastName": { "col": 1, "row": 5, "colSpan": 22, "rowSpan": 2 },
+            "emailLabel": { "col": 1, "row": 7, "colSpan": 22, "rowSpan": 1 },
+            "email": { "col": 1, "row": 8, "colSpan": 22, "rowSpan": 2 },
+            "streetLabel": { "col": 1, "row": 1, "colSpan": 22, "rowSpan": 1 },
+            "street": { "col": 1, "row": 2, "colSpan": 22, "rowSpan": 2 },
+            "cityLabel": { "col": 1, "row": 4, "colSpan": 22, "rowSpan": 1 },
+            "city": { "col": 1, "row": 5, "colSpan": 22, "rowSpan": 2 },
+            "postcodeLabel": { "col": 1, "row": 7, "colSpan": 22, "rowSpan": 1 },
+            "postcode": { "col": 1, "row": 8, "colSpan": 10, "rowSpan": 2 },
+            "noteLabel": { "col": 1, "row": 1, "colSpan": 22, "rowSpan": 1 },
+            "note": { "col": 1, "row": 2, "colSpan": 22, "rowSpan": 5, "align": "stretch" },
+            "newsletter": { "col": 1, "row": 7, "colSpan": 22, "rowSpan": 2 }
+          }
+        },
+        {
+          "minWidth": 600,
+          "cols": 48,
+          "rows": 11,
+          "places": {
+            "card": { "col": 1, "row": 1, "colSpan": 48, "rowSpan": 11, "tabs": "start" },
+            "person": { "col": 5, "row": 2, "colSpan": 43, "rowSpan": 9 },
+            "address": { "col": 5, "row": 2, "colSpan": 43, "rowSpan": 9 },
+            "notes": { "col": 5, "row": 2, "colSpan": 43, "rowSpan": 9 },
+            "firstNameLabel": { "col": 1, "row": 1, "colSpan": 10, "rowSpan": 2, "justify": "end" },
+            "firstName": { "col": 11, "row": 1, "colSpan": 32, "rowSpan": 2 },
+            "lastNameLabel": { "col": 1, "row": 3, "colSpan": 10, "rowSpan": 2, "justify": "end" },
+            "lastName": { "col": 11, "row": 3, "colSpan": 32, "rowSpan": 2 },
+            "emailLabel": { "col": 1, "row": 5, "colSpan": 10, "rowSpan": 2, "justify": "end" },
+            "email": { "col": 11, "row": 5, "colSpan": 32, "rowSpan": 2 },
+            "streetLabel": { "col": 1, "row": 1, "colSpan": 10, "rowSpan": 2, "justify": "end" },
+            "street": { "col": 11, "row": 1, "colSpan": 32, "rowSpan": 2 },
+            "cityLabel": { "col": 1, "row": 3, "colSpan": 10, "rowSpan": 2, "justify": "end" },
+            "city": { "col": 11, "row": 3, "colSpan": 18, "rowSpan": 2 },
+            "postcodeLabel": { "col": 29, "row": 3, "colSpan": 6, "rowSpan": 2, "justify": "end" },
+            "postcode": { "col": 35, "row": 3, "colSpan": 8, "rowSpan": 2 },
+            "noteLabel": { "col": 1, "row": 1, "colSpan": 10, "rowSpan": 2, "justify": "end" },
+            "note": { "col": 11, "row": 1, "colSpan": 32, "rowSpan": 6, "align": "stretch" },
+            "newsletter": { "col": 11, "row": 7, "colSpan": 32, "rowSpan": 2 }
+          }
+        }
+      ]
+    }
+  ]
+}

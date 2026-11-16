@@ -1,0 +1,60 @@
+/* The themes, the density of the controls and the text styles of Gridify. */
+@use '@gridify/studio/styles';
+
+/* Without a docking engine nothing paints the page: the body takes the background and the text color of the theme. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--grd-font-main);
+  background: var(--grd-bg-main);
+  color: var(--grd-text-main);
+}
+
+/* The page under the header: it scrolls, the header stays. */
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+main {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 12px 16px 24px;
+}
+.page {
+  display: grid;
+  gap: 16px;
+  max-width: 64em;
+  margin: 0 auto;
+}
+.page > p {
+  margin: 0;
+  max-width: 75ch;
+  line-height: 1.45;
+}
+
+/* The group boxes side by side while there is room for them, one under another on a narrow screen. */
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22em), 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+/* A row of buttons. */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* What the code gets from the fields. */
+.values {
+  margin: 0;
+  font-family: var(--grd-font-mono);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

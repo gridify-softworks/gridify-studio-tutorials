@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#efe4d2"/>
+  <defs>
+  <g id="bean">
+    <ellipse cx="0" cy="0" rx="46" ry="64" fill="#5a3418"/>
+    <path d="M-6 -58 C 18 -25, -22 20, 6 58" stroke="#2e1a0b" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <ellipse cx="-16" cy="-24" rx="10" ry="20" fill="#7a4a24" opacity="0.6"/>
+  </g>
+  </defs>
+  <use href="#bean" transform="translate(190 170) rotate(-25)"/>
+  <use href="#bean" transform="translate(330 300) rotate(35)"/>
+  <use href="#bean" transform="translate(470 160) rotate(10)"/>
+  <use href="#bean" transform="translate(600 320) rotate(-40)"/>
+  <use href="#bean" transform="translate(250 395) rotate(80) scale(0.8)"/>
+  <use href="#bean" transform="translate(640 120) rotate(60) scale(0.75)"/>
+  <use href="#bean" transform="translate(420 420) rotate(-70) scale(0.7)"/>
+  <use href="#bean" transform="translate(110 330) rotate(15) scale(0.7)"/>
+</svg>
